@@ -202,7 +202,7 @@ body {
     top: 24px;
     right: 0px;
     display: flex;
-    width: 50px;
+    width: max-content;
     flex-direction: column;
     gap: 5px;
     align-items: baseline;
@@ -212,6 +212,7 @@ body {
     line-height: 100%;
     letter-spacing: -0.04em;
     text-align: center;
+    opacity: .5
 }
 
 
@@ -2711,9 +2712,8 @@ body {
     }
 
     .head_language {
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(0%, -50%);
+       position: relative;
+       margin: 0 auto;
     }
 
     .head_language,
@@ -3713,6 +3713,7 @@ body {
 
     .header_podtitle {
         font-size: 16px;
+        margin-left: auto;
     }
 
     .header_title_2 {
@@ -3824,10 +3825,6 @@ body {
     }
 
 
-    .head_language {
-        transform: translate(0%, 50%);
-    }
-
     .header,
     .container_1160,
     .provodnik,
@@ -3836,9 +3833,7 @@ body {
         grid-column: 1 / span 4;
     }
 
-    .head_language {
-        top: 0px;
-    }
+  
 
     .banner {
         margin-top: 35px;
