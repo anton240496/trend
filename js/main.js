@@ -111,4 +111,18 @@ pay_close.addEventListener('click', e => {
 })};
 
 
+const  lang_osn = document.querySelector('.lang_osn');
+const  lang_img = document.querySelector('.lang_img');
+const  lang_none = document.querySelector('.lang_none');
+
+
+
+
+lang_osn.addEventListener('click', e => {
+  lang_none.classList.toggle('lang_div');
+  lang_img.classList.toggle('lang_rot');
+ 
+});
+
+
 
