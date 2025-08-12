@@ -1,0 +1,178 @@
+.thank {
+    position: relative;
+    min-height: 100vh;
+    padding: 120px 0;
+    background-image: url(../images/desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+.thank_logo,
+.thank_osnova,
+.thank_footer {
+    position: relative;
+    z-index: 1;
+}
+
+.thank_logo_title {
+    color: #222;
+    font-family: 'alatsi', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 70%;
+    letter-spacing: -0.04em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.thank_logo_text {
+    font-family: 'inter_semi_bold', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-align: center;
+}
+
+.thank_osnova {
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.thank_osnova_img {
+    display: flex;
+    justify-content: center;
+}
+
+.thank_title {
+    font-family: 'inter_bold', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    text-align: center;
+    margin: 6px auto 21px;
+    max-width: 735px;
+
+}
+
+.thank_text {
+    font-family: 'inter_regular', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: -0.03em;
+    text-align: center;
+    max-width: 345px;
+    margin: 0 auto;
+}
+
+.thank_footer {
+    font-family: 'inter_regular', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.03em;
+    max-width: 557px;
+    margin: 0 auto;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.thank_footer_bold span {
+    font-family: 'inter_bold', sans-serif;
+    font-weight: 700;
+
+}
+
+.thank_footer_bold {
+    list-style-image: url(../images/mail.svg);
+}
+
+.gradient_text {
+    list-style-image: url(../images/question.svg);
+}
+
+
+@media (max-width: 992px) {
+
+    .thank {
+        padding: 90px 0;
+    }
+
+    .thank_logo_title {
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
+
+    .thank_logo_text {
+        font-size: 15px;
+    }
+
+    .thank_osnova {
+        margin-top: 35px;
+    }
+
+    .thank_title {
+        font-size: 45px;
+        margin-bottom: 15px;
+    }
+
+    .thank_text {
+        font-size: 19px;
+        line-height: 28px;
+    }
+
+    .thank_footer {
+        font-size: 16px;
+        margin-top: 55px;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .thank {
+        padding: 60px 0;
+    }
+
+    .thank {
+        background-image: url(../images/mobile.svg);
+    }
+
+    .thank_logo_title {
+        font-size: 18px;
+        margin-bottom: 3px;
+    }
+
+    .thank_logo_text {
+        font-size: 12px;
+    }
+
+    .thank_osnova {
+        margin-top: 30px;
+    }
+
+    .thank_title {
+        font-size: 30px;
+        margin-bottom: 7px;
+    }
+
+    .thank_text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .thank_footer {
+        font-size: 14px;
+        margin-top: 50px;
+        gap: 20px;
+        margin-left: 25px;
+        margin-right: auto;
+    }
+}
