@@ -2713,7 +2713,6 @@ body {
     .head_language {
         left: 50%;
         margin-right: -50%;
-        top: 2%;
         transform: translate(0%, -50%);
     }
 
@@ -2723,7 +2722,7 @@ body {
     }
 
     .header_inner {
-        margin-top: 46px;
+        margin-top: 50px;
     }
 
 
