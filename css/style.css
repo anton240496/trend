@@ -1026,9 +1026,9 @@ body {
     border-radius: 30px;
     list-style-type: disc;
     font-size: 0;
-    height: 0px;
+    max-height: 0;
     padding: 0;
-    transition: padding-top 2s, padding-bottom 2s, height 2s;
+    transition: padding-top 0.5s, padding-bottom 0.5s;
     line-height: 30px;
     letter-spacing: -0.02em;
     color: #222222;
