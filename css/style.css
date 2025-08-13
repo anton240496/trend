@@ -1153,7 +1153,7 @@ body {
     margin-top: 0px;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 1s, opacity 0.5s linear, padding 1s;
+    transition: visibility 0.5s, opacity 0.5s linear, padding 0.5s;
     padding: 0 30px 0px 27px;
 }
 
