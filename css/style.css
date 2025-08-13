@@ -196,57 +196,6 @@ body {
 
 
 
-.head_language {
-    font-size: 20px;
-    position: absolute;
-    top: 24px;
-    right: 0px;
-    display: flex;
-    width: max-content;
-    flex-direction: column;
-    gap: 5px;
-    align-items: baseline;
-    font-family: 'inter_regular', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: -0.04em;
-    text-align: center;
-    opacity: .5
-}
-
-
-
-.lang_img {
-    transition: all 1s;
-}
-
-.lang_rot {
-    transform: rotate(180deg);
-}
-
-
-.lang_osn {
-    display: flex;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.lang_none {
-    color: transparent;
-    height: 0px;
-    transition: all 1s;
-}
-
-.head_language img {
-    cursor: pointer;
-}
-
-.lang_div {
-    font-size: 16px;
-    color: #000000;
-}
-
 .header_inner {
     margin: 0 auto;
     margin-top: 126px;
@@ -1202,13 +1151,16 @@ body {
     letter-spacing: -0.02em;
     color: #222222;
     margin-top: 0px;
+    visibility: hidden;
     opacity: 0;
-     transition: all 1s;
+    transition: visibility 1s, opacity 0.5s linear, padding 1s;
     padding: 0 30px 0px 27px;
 }
 
 .on .apply_item_text {
+    visibility: visible;
     max-height: 1000px;
+    padding-bottom: 30px;
     font-size: 17px;
     opacity: 0.5;
 }
@@ -2414,7 +2366,7 @@ body {
         margin-left: 5px;
     }
 
-   .on .apply_item_text {
+    .on .apply_item_text {
         font-size: 15px;
     }
 
@@ -2706,15 +2658,7 @@ body {
         overflow: visible;
     }
 
-    .head_language {
-        top: 10px;
-    }
-
-    .head_language,
-    .lang_div {
-        font-size: 14px;
-    }
-
+ 
     .header_inner {
         margin-top: 50px;
     }
@@ -3056,20 +3000,20 @@ body {
         margin: auto 20px auto auto;
     }
 
-    .apply_item_block{
+    .apply_item_block {
         height: 40px;
     }
 
     .apply_item_text {
         line-height: 120%;
         padding: 0 10px;
-         
-       
+
+
     }
 
     .on .apply_item_text {
-         font-size: 12px;
-          padding-bottom: 10px;
+        font-size: 12px;
+        padding-bottom: 10px;
     }
 
     .apply_item picture {
