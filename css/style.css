@@ -1151,10 +1151,6 @@ body {
 }
 
 
-.apply_item_text {
-    height: auto;
-}
-
 
 .apply_item picture {
     width: 80px;
@@ -1183,7 +1179,7 @@ body {
     width: 100%;
     background-color: #fff;
     border-radius: 30px;
-    transition: all 1s;
+    transition: max-height 1s;
     width: 378px;
     overflow: hidden;
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
@@ -1192,29 +1188,29 @@ body {
 .on.apply_item {
     z-index: 2;
     max-height: 1000px;
-    height: auto;
+    height: max-content;
+
 }
 
+
 .apply_item_text {
-    max-height: 10px;
-     overflow:hidden;
+    max-height: 0px;
+    overflow: hidden;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 0px;
     line-height: 24px;
     letter-spacing: -0.02em;
     color: #222222;
     margin-top: 0px;
-    font-size: 0px;
     opacity: 0;
-    transition: padding 1s, max-height 1s, overflow 1s, opacity 1s;
-    padding: 0 35px 0px 27px;
+     transition: all 1s;
+    padding: 0 30px 0px 27px;
 }
 
 .on .apply_item_text {
     max-height: 1000px;
-    padding-bottom: 30px;
-    opacity: 0.5;
     font-size: 17px;
+    opacity: 0.5;
 }
 
 .apply_img_block {
@@ -2418,7 +2414,7 @@ body {
         margin-left: 5px;
     }
 
-    .on .apply_item_text {
+   .on .apply_item_text {
         font-size: 15px;
     }
 
@@ -2640,9 +2636,7 @@ body {
         gap: 8px;
     }
 
-    .apply_item_text {
-        padding: 0 20px;
-    }
+
 
     .apply_img_block picture {
         width: 270px;
@@ -2713,7 +2707,7 @@ body {
     }
 
     .head_language {
-       top: 10px;
+        top: 10px;
     }
 
     .head_language,
@@ -3061,10 +3055,15 @@ body {
         margin: auto 20px auto auto;
     }
 
-    .on .apply_item_text {
-        font-size: 12px;
+    .apply_item_text {
         line-height: 120%;
-        padding-bottom: 10px;
+        padding: 0 10px;
+          padding-bottom: 10px;
+       
+    }
+
+    .on .apply_item_text {
+         font-size: 12px;
     }
 
     .apply_item picture {
@@ -3777,9 +3776,6 @@ body {
         gap: 5px;
     }
 
-    .apply_item_text {
-        padding: 0 10px;
-    }
 
     .apply_banner_text h3 {
         font-size: 26px;
@@ -3833,7 +3829,7 @@ body {
         grid-column: 1 / span 4;
     }
 
-  
+
 
     .banner {
         margin-top: 35px;
@@ -4031,7 +4027,7 @@ body {
 
 
     .apply_item {
-        height: 40px;
+        max-height: 40px;
     }
 
 
