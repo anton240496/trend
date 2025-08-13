@@ -1028,7 +1028,7 @@ body {
     font-size: 0;
     height: 0px;
     padding: 0;
-    transition: padding-top 1s, padding-bottom 1s, height 1s;
+    transition: padding-top 2s, padding-bottom 2s, height 2s;
     line-height: 30px;
     letter-spacing: -0.02em;
     color: #222222;
