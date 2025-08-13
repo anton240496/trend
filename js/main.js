@@ -1,6 +1,5 @@
 
 
-
 const op2s = document.querySelectorAll('.apply_wrap')
 
 for (op2 of op2s) {

@@ -936,7 +936,7 @@ body {
     font-family: 'inter_bold', sans-serif;
     font-weight: 700;
     font-size: 80px;
-    line-height: 90%;
+    line-height: 100%;
     letter-spacing: -0.04em;
     text-align: center;
     margin-bottom: 40px;
@@ -1681,7 +1681,7 @@ body {
 .tarif_pod {
     margin-top: auto;
     padding-top: 16px;
-    max-width: 308px;
+    /* max-width: 308px; */
 }
 
 
@@ -1719,7 +1719,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 308px;
+    width: 100%;
     height: 56px;
     margin-top: 5px;
 }
@@ -1728,7 +1728,6 @@ body {
     margin-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 14px;
     font-size: 12px;
     line-height: 100%;
