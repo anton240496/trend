@@ -3056,15 +3056,20 @@ body {
         margin: auto 20px auto auto;
     }
 
+    .apply_item_block{
+        height: 40px;
+    }
+
     .apply_item_text {
         line-height: 120%;
         padding: 0 10px;
-          padding-bottom: 10px;
+         
        
     }
 
     .on .apply_item_text {
          font-size: 12px;
+          padding-bottom: 10px;
     }
 
     .apply_item picture {
