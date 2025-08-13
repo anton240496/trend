@@ -3022,6 +3022,7 @@ body {
     .apply_item {
         width: 100%;
         border-radius: 10px;
+        max-height: 40px;
     }
 
     .apply_img_block {
@@ -4023,11 +4024,6 @@ body {
         font-size: 12px;
         margin: auto 0px auto auto;
 
-    }
-
-
-    .apply_item {
-        max-height: 40px;
     }
 
 
