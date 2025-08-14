@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/mask.js"></script>
+  <script src="js/mask_list.js"></script>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pay_style.css">
@@ -1193,8 +1195,8 @@
         <form class="pay_form" action="">
           <div class="pay_input">
             <input type="text" required placeholder="Your name">
-             <input type="email" required placeholder="Email">
-            <input type="tel" required placeholder="Phone" value="" id="phone">
+            <input type="email" required placeholder="Email">
+            <input class="phone" type="text" name="phone" value="" placeholder="Phone">
           </div>
           <label class="pay_approval">
             <input class="pay_check" type="checkbox" required id="approval">
@@ -1219,7 +1221,7 @@
           <div class="pay_input">
             <input type="text" required placeholder="Your name">
             <input type="email" required placeholder="Email">
-            <input type="tel" required placeholder="Phone" value="" id="phone2">
+            <input class="phone" type="text" name="phone" value="" placeholder="Phone">
           </div>
           <label class="pay_approval">
             <input class="pay_check" type="checkbox" required id="approval">
@@ -1231,7 +1233,9 @@
           </label>
           <button class="pay_btn btn" type="submit">Submit</button>
         </form>
-
+        <script>
+          mask(".phone");
+        </script>
       </section>
     </div>
 

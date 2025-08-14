@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/mask.js"></script>
+  <script src="js/mask_list.js"></script>
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pay_style.css">
   <link rel="stylesheet" href="css/main.min.css">
@@ -1214,7 +1215,7 @@
           <div class="pay_input">
             <input type="text" required placeholder="Il tuo nome">
             <input type="email" required placeholder="ll tuo email">
-            <input type="text" required placeholder="Il tuo numero di telefono" id="phone">
+            <input class="phone" type="text" name="phone" value="" placeholder="Il tuo numero di telefono">
           </div>
           <label class="pay_approval">
             <input class="pay_check" type="checkbox" required id="approval">
@@ -1226,7 +1227,7 @@
           </label>
           <button class="pay_btn btn" type="submit">Procedi al Pagamento</button>
         </form>
-
+      
       </section>
 
       <section class="pay pay_2500">
@@ -1239,7 +1240,7 @@
           <div class="pay_input">
             <input type="text" required placeholder="Il tuo nome">
             <input type="email" required placeholder="ll tuo email">
-            <input type="text" required placeholder="Il tuo numero di telefono" id="phone2">
+            <input class="phone" type="text" name="phone" value="" placeholder="Il tuo numero di telefono">
 
           </div>
           <label class="pay_approval">
@@ -1254,6 +1255,9 @@
         </form>
 
       </section>
+        <script>
+          mask(".phone");
+        </script>
     </div>
 
     <div class="container_gird">
@@ -1489,8 +1493,6 @@
     </div>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src='https://unpkg.com/imask'></script>
-  <script src="./script.js"></script>
   <script src="js/main.js"></script>
   <script src="js/main1.js"></script>
 </body>
