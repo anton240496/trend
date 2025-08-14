@@ -1,7 +1,6 @@
 
 
 
-
 const mask = (selector) => {
     function setMask() {
         let matrix = '+###############';
@@ -33,3 +32,8 @@ const mask = (selector) => {
         input.addEventListener('blur', setMask);
     });
 };
+
+$('.pay_btn').click(function() {
+    var phone = mask
+
+    alert(phone);})

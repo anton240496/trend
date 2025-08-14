@@ -1755,10 +1755,10 @@ body {
 
 .tarif_osoba_block {
     border-radius: 10px;
-    margin-left: -4px;
+    margin-left: -15px;
     padding-right: 3px;
-    margin-right: 24px;
-    border: 2px solid transparent;
+    margin-right: 6px;
+    border: 3px solid transparent;
     margin-top: 32px;
     background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%), linear-gradient(to right, #603FD9 0%, #E83D72 100%);
     background-clip: padding-box, border-box;
@@ -2657,7 +2657,7 @@ body {
         overflow: visible;
     }
 
- 
+
     .header_inner {
         margin-top: 50px;
     }
@@ -3473,10 +3473,17 @@ body {
         display: block;
     }
 
+    .tarif_osoba_block {
+        margin-left: -17px;
+        padding-right: 3px;
+        margin-right: -10px;
+    }
+
+
     .tarif_item {
         width: auto;
         margin: 0 12px;
-        padding: 28px 21px;
+        padding: 28px 35px;
         border-radius: 20px;
     }
 
@@ -3519,7 +3526,8 @@ body {
     }
 
     .tarif_osoba {
-        padding: 13px 20px;
+        padding: 13px 25px;
+        gap: 5px;
     }
 
 
@@ -3528,9 +3536,6 @@ body {
         margin-left: 15px;
     }
 
-    .tarif_osoba {
-        gap: 5px;
-    }
 
     .tarif_like {
         padding: 10px 8px;
