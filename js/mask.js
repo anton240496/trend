@@ -1,13 +1,14 @@
+function multi ()
+{
+var themes = []; // начальный пустой список выбранных тем
+var list_checkbox = document.querySelectorAll ('input[type="checkbox"]'); //коллекция ВСЕХ чекбоксов страницы
+for (var j = 0, J = list_checkbox.length; j < J; j++)
+if (list_checkbox[j].checked) themes.push (document.querySelector ('label[for=' + list_checkbox[j].id + ']').innerText);
+ 
+if (themes.length) alert ('Выбраны темы: ' + themes.join (', '));
+else alert ('Темы не выбраны');
+}
 
-function ValidPhone() {
-    var re = /^[\d\+][\d\(\)\ -]{4,14}\d$/;
-    var myPhone = document.getElementById('phone').value;
-    var valid = re.test(myPhone);
-    if (valid) output = 'Номер телефона введен правильно!';
-    else output = 'Номер телефона введен неправильно!';
-    document.getElementById('message').innerHTML = document.getElementById('message').innerHTML+'<br />'+output;
-    return valid;
-}  
 
 const mask = (selector) => {
     function setMask() {
