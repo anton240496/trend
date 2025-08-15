@@ -1,10 +1,10 @@
 
 
-$(function() {
-   $("input[name='phone']").each(function () {
-       runIntlTelInputAndGeoIp($(this)[0]);
-    });
-});
+// $(function() {
+//    $("input[name='phone']").each(function () {
+//        runIntlTelInputAndGeoIp($(this)[0]);
+//     });
+// });
 
 
 
