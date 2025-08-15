@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/mask.js"></script>
   <script src="js/mask_list.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pay_style.css">
@@ -1215,7 +1216,8 @@
           <div class="pay_input">
             <input type="text" required placeholder="Il tuo nome">
             <input type="email" required placeholder="ll tuo email">
-            <input class="phone" type="text" name="phone" value="" placeholder="Il tuo numero di telefono">
+            <input type="hidden" name="country" value="IT">
+            <input class="phone error" name="phone" placeholder="Il tuo numero di telefono" type="tel">
           </div>
           <label class="pay_approval">
             <input class="pay_check" type="checkbox" required id="approval">
@@ -1225,7 +1227,7 @@
               le email di marketing.
             </span>
           </label>
-          <button class="pay_btn btn" type="submit">Procedi al Pagamento</button>
+          <input class="submit-btn w-button pay_btn btn" type="submit" value="Procedi al Pagamento">
         </form>
       
       </section>
@@ -1240,7 +1242,8 @@
           <div class="pay_input">
             <input type="text" required placeholder="Il tuo nome">
             <input type="email" required placeholder="ll tuo email">
-            <input class="phone" type="text" name="phone" value="" placeholder="Il tuo numero di telefono">
+            <input type="hidden" name="country" value="IT">
+            <input class="phone error" name="phone" placeholder="Il tuo numero di telefono" type="tel">
 
           </div>
           <label class="pay_approval">
@@ -1251,7 +1254,7 @@
               le email di marketing.
             </span>
           </label>
-          <button class="pay_btn btn" type="submit">Invia</button>
+          <input class="submit-btn w-button pay_btn btn" type="submit" value="Invia">
         </form>
 
       </section>
@@ -1492,9 +1495,12 @@
       </div>
     </div>
   </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="js/jquery.maskedinput-1.2.2.js"></script>
   <script src="js/main.js"></script>
   <script src="js/main1.js"></script>
+  <script src="js/intlTelInput.min.js"></script>
+  <script src="js/validator.js"></script>
 </body>
 
 </html>

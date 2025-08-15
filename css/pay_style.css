@@ -86,6 +86,7 @@
     width: 0px;
     background: transparent;
     border: none;
+    transition: all 1s;;
 }
 
 .pay_open .pay_input input {
