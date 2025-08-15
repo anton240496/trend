@@ -21,6 +21,23 @@ picture {
   margin: 0;
 }
 
+.hide,
+.flag-dropdown {
+  display: none;
+}
+
+.error-box {
+  color: #fff;
+  background-color: #DE5042;
+  border-radius: 5px;
+  text-align: center;
+  width: 240px;
+  font-size: 13px;
+  line-height: 20px;
+  margin: 5px auto !important;
+  z-index: 100;
+}
+
 img,
 picture {
   max-width: 100%;
