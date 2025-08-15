@@ -1,13 +1,4 @@
-function multi ()
-{
-var themes = []; // начальный пустой список выбранных тем
-var list_checkbox = document.querySelectorAll ('input[type="checkbox"]'); //коллекция ВСЕХ чекбоксов страницы
-for (var j = 0, J = list_checkbox.length; j < J; j++)
-if (list_checkbox[j].checked) themes.push (document.querySelector ('label[for=' + list_checkbox[j].id + ']').innerText);
- 
-if (themes.length) alert ('Выбраны темы: ' + themes.join (', '));
-else alert ('Темы не выбраны');
-}
+
 
 
 const mask = (selector) => {

@@ -1,5 +1,11 @@
 
 
+$(function() {
+   $("input[name='phone']").each(function () {
+       runIntlTelInputAndGeoIp($(this)[0]);
+    });
+});
+
 
 
 const op2s = document.querySelectorAll('.apply_wrap')
@@ -101,6 +107,9 @@ tarif_btn.addEventListener('click', e => {
   pay_2500.classList.add('pay_open');
   zatem.classList.add('zatem_open');
   body.style.overflowY ='hidden'
+  
+// const  pay_btn  = document.querySelector('.checkmark');
+
  
 })};
 
@@ -109,21 +118,43 @@ pay_close.addEventListener('click', e => {
   pay_2500.classList.remove('pay_open');
   zatem.classList.remove('zatem_open');
   body.style.overflowY ='auto'
+
 })};
 
 
-const  lang_osn = document.querySelector('.lang_osn');
-const  lang_img = document.querySelector('.lang_img');
-const  lang_none = document.querySelector('.lang_none');
 
 
+const  pay_btn  = document.querySelector('.pay_checkb');
+const  checkmark  = document.querySelector('.checkmarkb');
 
+pay_btn.addEventListener('click', e => {
 
-lang_osn.addEventListener('click', e => {
-  lang_none.classList.toggle('lang_div');
-  lang_img.classList.toggle('lang_rot');
  
+var themes = []; // начальный пустой список выбранных тем
+var list_checkbox = document.querySelectorAll ('input[type="checkbox"]'); //коллекция ВСЕХ чекбоксов страницы
+for (var j = 0, J = list_checkbox.length; j < J; j++)
+if (list_checkbox[j].checked) themes.push (document.querySelector )
+ 
+// if (themes.length) alert (' ' + themes.join (', '));
+  checkmark.classList.add('checkmark_bord');
+
+
 });
 
+const  pay_btn2  = document.querySelector('.pay_checkb2');
+const  checkmark2  = document.querySelector('.checkmarkb2');
 
 
+pay_btn2.addEventListener('click', e => {
+
+ 
+var themes = []; // начальный пустой список выбранных тем
+var list_checkbox2 = document.querySelectorAll ('input[type="checkbox"]'); //коллекция ВСЕХ чекбоксов страницы
+for (var j = 0, J = list_checkbox2.length; j < J; j++)
+if (list_checkbox2[j].checked) themes.push (document.querySelector )
+ 
+// if (themes.length) alert (' ' + themes.join (', '));
+  checkmark2.classList.add('checkmark_bord');
+
+
+});
