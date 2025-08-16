@@ -3,6 +3,9 @@
 
 }
 
+.pay_form{
+    /* background-color: red; */
+}
 
 .pay {
     background-color: #fff;
@@ -62,7 +65,9 @@
     line-height: 15px;
     text-align: center;
 }
-
+.none{
+display: none !important;
+}
 .pay_open .pay_title {
     display: block;
     font-family: 'inter_semi_bold', sans-serif;
@@ -84,7 +89,7 @@
     margin-bottom: 24px;
 }
 
-.pay_input input {
+.pay_input .form_input {
     width: 0px;
     background: transparent;
     border: none;
@@ -92,7 +97,7 @@
     ;
 }
 
-.pay_open .pay_input input {
+.pay_open .pay_input .form_input {
     width: 460px;
     padding: 21px 22px;
     border-radius: 10px;
@@ -102,7 +107,7 @@
 
 
 
-.pay_input input::placeholder {
+.pay_input .form_input::placeholder {
     font-family: 'inter_regular', sans-serif;
     font-weight: 500;
     font-size: 18px;
@@ -131,11 +136,8 @@
 }
 
 .pay_check {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+    outline: none;
+   margin-top: -0px;
 }
 
 .checkmark {
@@ -190,8 +192,6 @@
     color: #222222;
     transition: all .5s;
     opacity: .4;
-    margin-left: 30px;
-
 }
 
 
@@ -256,12 +256,20 @@
         gap: 8px;
     }
 
-    .pay_open .pay_input input {
+    .pay_check {
+   margin-top: -15px;
+}
+
+    .pay_open .pay_input .form_input {
         width: 300px;
         padding: 17px 17px;
     }
+    
+    .pay_open .pay_input .form_input:required {
+        /* background-color: red; */
+    }
 
-    .pay_input input::placeholder {
+    .pay_input .form_input::placeholder {
         font-size: 14px;
     }
 
@@ -279,7 +287,7 @@
     }
 
 
-    .pay_open .pay_input input {
+    .pay_open .pay_input .form_input {
         width: 280px;
     }
 

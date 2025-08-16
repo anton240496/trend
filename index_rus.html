@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="js/mask.js"></script>
-  <script src="js/mask_list.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pay_style.css">
@@ -1180,22 +1180,52 @@
 
         <img class="pay_close" src="images/pay_close.svg" alt="">
         <h1 class="pay_title">Подготовка вашего заказа. Введите ваши данные</h1>
-        <form class="pay_form" action="">
+    
+         <form class="pay_form" action="" id="contactForm">
           <div class="pay_input">
-            <input type="text" required placeholder="Your name">
-            <input type="email" required placeholder="Email">
-            <input type="hidden" name="country" value="RU">
-            <input class="phone error" name="phone" placeholder="Phone" type="tel">
+            <div class="form-group">
+              <span class="none" id="currentDefaultCountry"></span>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="form-group">
+              <div class="container" id="mainContainer" data-default-country="RU"></div>
+              <div class="input-group">
+                <div class=" none country-select-wrapper">
+                  <select id="country" class="country-select">
+                    <!-- Страны будут добавлены через JavaScript -->
+                  </select>
+                  <span id="phonePrefix" class="phone-prefix">+7</span>
+                </div>
+                <input type="tel" id="phone" class="phone-input" name="phone" placeholder="Phones" required>
+              </div>
+              <div id="phoneError" class="none error-message">Пожалуйста, введите действительный номер телефона</div>
+
+              <div class="none country-info">
+                <span id="countryFlag" class="country-flag flag-icon flag-icon-ru"></span>
+                <div class="country-details">
+                  <div id="countryName" class="country-name">Россия</div>
+                  <div id="countryFormat" class="country-format">Формат: +7 (XXX) XXX-XX-XX</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <label class="pay_approval">
-            <input class="pay_check" type="checkbox" required id="approval">
-            <span class="checkmark checkmarkb"></span>
-            <span class="pay_label" for="approval">
-              By checking this box, you agree to the Terms of Use and Privacy Policy for access to the course and
-              marketing emails.
-            </span>
-          </label>
-          <input class="submit-btn w-button pay_btn btn pay_checkb" type="submit" value="Перейти к оплате">
+          <div class="form-group agreement">
+            <div class="checkbox-container" id="agreementContainer">
+              <label class="pay_approval">
+              <input class="pay_check" type="checkbox" required  id="agreement" name="agreement" required>
+              <span class="checkmark checkmarkb"></span>
+              <label class="pay_label" for="agreement">By checking this box, you agree to the Terms of Use and Privacy Policy for access to the course and
+              marketing emails.</label>
+                </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit pay_btn btn pay_checkb">Перейти к оплате</button>
         </form>
 
       </section>
@@ -1206,26 +1236,56 @@
         <h1 class="pay_title">Места на этом тарифе закончились</h1>
         <p class="pay_text">Старт набора в следующую группу совсем скоро! Оставьте ваши данные, и мы сообщим вам о
           старте продаж.</p>
-        <form class="pay_form" action="">
-          <div class="pay_input">
-            <input type="text" required placeholder="Your name">
-            <input type="email" required placeholder="Email">
-            <input type="hidden" name="country2" value="RU">
-            <input class="phone error" name="phone" placeholder="Phone" type="tel">
+    
 
+  <form class="pay_form" action="" id="contactForm2">
+          <div class="pay_input">
+            <div class="form-group">
+              <span class="none" id="currentDefaultCountry2"></span>
+              <input type="text" id="name2" name="name" placeholder="Your name" required>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email2" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="form-group">
+              <div class="container" id="mainContainer2" data-default-country="RU"></div>
+              <div class="input-group">
+                <div class=" none country-select-wrapper">
+                  <select id="country2" class="country-select">
+                    <!-- Страны будут добавлены через JavaScript -->
+                  </select>
+                  <span id="phonePrefix" class="phone-prefix">+7</span>
+                </div>
+                <input type="tel" id="phone2" class="phone-input" name="phone" placeholder="Phone" required>
+              </div>
+              <div id="phoneError2" class="none error-message">Пожалуйста, введите действительный номер телефона</div>
+
+              <div class="none country-info">
+                <span id="countryFlag2" class="country-flag flag-icon flag-icon-ru"></span>
+                <div class="country-details">
+                  <div id="countryName2" class="country-name">Россия</div>
+                  <div id="countryFormat2" class="country-format">Формат: +7 (XXX) XXX-XX-XX</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <label class="pay_approval">
-            <input class="pay_check" type="checkbox" required id="approval">
-            <span class="checkmark checkmarkb2"></span>
-            <span class="pay_label" for="approval">
-              By checking this box, you agree to the Terms of Use and Privacy Policy for access to the course and
-              marketing emails.
-            </span>
-          </label>
-          <input class="submit-btn w-button pay_btn btn pay_checkb2" type="submit" value="Отправить">
+          <div class="form-group agreement">
+            <div class="checkbox-container" id="agreementContainer2">
+              <label class="pay_approval">
+              <input class="pay_check" type="checkbox" required  id="agreement2" name="agreement" required>
+              <span class="checkmark checkmarkb"></span>
+              <label class="pay_label" for="agreement2">By checking this box, you agree to the Terms of Use and Privacy Policy for access to the course and
+              marketing emails.</label>
+                
+                </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit pay_btn btn pay_checkb">Отправить</button>
         </form>
         <script>
-          mask(".phone");
         </script>
       </section>
     </div>
@@ -1461,13 +1521,10 @@
       </div>
     </div>
   </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script src="js/jquery.maskedinput-1.2.2.js"></script>
+  <script src="js/lang.js"></script>
+  <script src="js/lang2.js"></script>
   <script src="js/main.js"></script>
   <script src="js/main1.js"></script>
-  <script src="js/intlTelInput.min.js"></script>
-  <script src="js/validator.js"></script>
-  <script src="js/validator2.js"></script>
 </body>
 
 </html>

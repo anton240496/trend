@@ -1,412 +1,47 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Международная контактная форма</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #1a2980, #26d0ce);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 900px;
-            background: rgba(255, 255, 255, 0.97);
-            border-radius: 15px;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-        }
-        
-        header {
-            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-            color: white;
-            padding: 25px 40px;
-            text-align: center;
-        }
-        
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            letter-spacing: 0.5px;
-        }
-        
-        .subtitle {
-            font-size: 1rem;
-            font-weight: 300;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-        
-        .form-container {
-            padding: 30px;
-        }
-        
-        .form-group {
-            margin-bottom: 25px;
-            position: relative;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: #2d3748;
-            font-size: 1rem;
-        }
-        
-        .input-group {
-            position: relative;
-            display: flex;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        }
-        
-        .country-select-wrapper {
-            position: relative;
-            width: 35%;
-            min-width: 180px;
-        }
-        
-        .country-select {
-            width: 100%;
-            padding: 12px 45px 12px 15px;
-            border: none;
-            background-color: #f8fafc;
-            font-size: 15px;
-            cursor: pointer;
-            outline: none;
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 15px center;
-        }
-        
-        .phone-input {
-            width: 65%;
-            padding: 12px 15px;
-            border: none;
-            font-size: 15px;
-            outline: none;
-            background: white;
-        }
-        
-        .error-message {
-            color: #e53e3e;
-            font-size: 13px;
-            margin-top: 8px;
-            display: none;
-            padding-left: 5px;
-        }
-        
-        input.error, .checkbox-container.error {
-            box-shadow: inset 0 0 0 2px #e53e3e;
-        }
-        
-        .country-info {
-            display: flex;
-            align-items: center;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: #f1f5f9;
-            border-radius: 8px;
-        }
-        
-        .country-flag {
-            margin-right: 12px;
-            font-size: 24px;
-            border-radius: 4px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .country-details {
-            flex-grow: 1;
-        }
-        
-        .country-name {
-            font-weight: 600;
-            color: #1e293b;
-            font-size: 14px;
-        }
-        
-        .country-format {
-            font-size: 13px;
-            color: #64748b;
-        }
-        
-        input[type="text"],
-        input[type="email"] {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            font-size: 15px;
-            transition: all 0.3s ease;
-            background: white;
-        }
-        
-        input[type="text"]:focus,
-        input[type="email"]:focus {
-            border-color: #4299e1;
-            box-shadow: 0 0 0 4px rgba(66, 153, 225, 0.2);
-            outline: none;
-        }
-        
-        .btn-submit {
-            padding: 14px;
-            background: linear-gradient(to right, #0f2027, #203a43);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            letter-spacing: 0.5px;
-            margin-top: 10px;
-            width: 100%;
-        }
-        
-        .btn-submit:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
-            background: linear-gradient(to right, #203a43, #2c5364);
-        }
-        
-        .checkbox-container {
-            display: flex;
-            align-items: flex-start;
-            padding: 10px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            border: 2px solid #e2e8f0;
-        }
-        
-        .checkbox-container label {
-            margin: 0;
-            font-weight: normal;
-            padding-left: 10px;
-            font-size: 14px;
-            color: #4a5568;
-            cursor: pointer;
-            flex-grow: 1;
-        }
-        
-        .checkbox-container input[type="checkbox"] {
-            margin-top: 3px;
-            cursor: pointer;
-        }
-        
-        .agreement-link {
-            color: #3182ce;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .agreement-link:hover {
-            text-decoration: underline;
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: #64748b;
-            font-size: 14px;
-            border-top: 1px solid #e2e8f0;
-            background: #f8fafc;
-        }
-        
-        @media (max-width: 600px) {
-            .input-group {
-                flex-direction: column;
-            }
+ document.addEventListener('DOMContentLoaded', function() {
+            const mainContainer = document.querySelector('#mainContainer');
+            const countrySelect = document.querySelector('#country');
+            const phoneInput = document.querySelector('#phone');
+            const phoneError = document.querySelector('#phoneError');
+            const nameInput = document.querySelector('#name');
+            const nameError = document.querySelector('#nameError');
+            const emailInput = document.querySelector('#email');
+            const emailError = document.querySelector('#emailError');
+            const agreementInput = document.querySelector('#agreement');
+            const agreementError = document.querySelector('#agreementError');
+            const agreementContainer = document.querySelector('#agreementContainer');
+            const form = document.querySelector('#contactForm');
+            const countryFlag = document.querySelector('#countryFlag');
+            const countryName = document.querySelector('#countryName');
+            const countryFormat = document.querySelector('#countryFormat');
+            const phonePrefix = document.querySelector('#phonePrefix');
+            const currentDefaultCountryEl = document.querySelector('#currentDefaultCountry');
             
-            .country-select-wrapper, .phone-input {
-                width: 100%;
-            }
+            // Получаем код страны по умолчанию из data-атрибута
+            const defaultCountryCode = mainContainer.getAttribute('data-default-country') || 'RU';
             
-            .phone-input {
-                border-top: 1px solid #e2e8f0;
-            }
-            
-            header {
-                padding: 20px 15px;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-            }
-        }
-        
-        .phone-prefix {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #64748b;
-            pointer-events: none;
-            font-weight: 500;
-        }
-        
-        .validation-icon {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 16px;
-            display: none;
-        }
-        
-        .valid .validation-icon.valid-icon {
-            display: block;
-            color: #38a169;
-        }
-        
-        .invalid .validation-icon.invalid-icon {
-            display: block;
-            color: #e53e3e;
-        }
-        
-        .form-group.valid input:not([type="checkbox"]) {
-            border-color: #38a169;
-        }
-        
-        .form-group.invalid input:not([type="checkbox"]) {
-            border-color: #e53e3e;
-        }
-        
-        .form-group .validation-icon {
-            top: 40px;
-        }
-        
-        .agreement .validation-icon {
-            top: 35px;
-        }
-        
-        .country-count {
-            text-align: center;
-            padding: 10px;
-            background: #f1f5f9;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            font-size: 14px;
-        }
-        
-        .country-count strong {
-            color: #1e293b;
-            font-size: 1.2rem;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Международная контактная форма</h1>
-            <div class="subtitle">Поддержка всех стран мира с валидацией данных</div>
-        </header>
-        
-        <div class="form-container">
-            <form id="contactForm">
-                <div class="country-count">
-                    Поддерживается <strong>249</strong> стран и территорий
-                </div>
-                
-                <div class="form-group">
-                    <label for="name">Полное имя</label>
-                    <input type="text" id="name" name="name" placeholder="Введите ваше полное имя" required>
-                    <span class="validation-icon valid-icon"><i class="fas fa-check-circle"></i></span>
-                    <span class="validation-icon invalid-icon"><i class="fas fa-exclamation-circle"></i></span>
-                    <div id="nameError" class="error-message">Пожалуйста, введите ваше имя</div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Электронная почта</label>
-                    <input type="email" id="email" name="email" placeholder="example@domain.com" required>
-                    <span class="validation-icon valid-icon"><i class="fas fa-check-circle"></i></span>
-                    <span class="validation-icon invalid-icon"><i class="fas fa-exclamation-circle"></i></span>
-                    <div id="emailError" class="error-message">Пожалуйста, введите корректный email</div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Номер телефона</label>
-                    <div class="input-group">
-                        <div class="country-select-wrapper">
-                            <select id="country" class="country-select">
-                                <!-- Страны будут добавлены через JavaScript -->
-                            </select>
-                            <span id="phonePrefix" class="phone-prefix">+7</span>
-                        </div>
-                        <input type="tel" id="phone" class="phone-input" name="phone" placeholder="(999) 999-99-99" required>
-                    </div>
-                    <div id="phoneError" class="error-message">Пожалуйста, введите действительный номер телефона</div>
-                    
-                    <div class="country-info">
-                        <span id="countryFlag" class="country-flag flag-icon flag-icon-ru"></span>
-                        <div class="country-details">
-                            <div id="countryName" class="country-name">Россия</div>
-                            <div id="countryFormat" class="country-format">Формат: +7 (XXX) XXX-XX-XX</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="form-group agreement">
-                    <div class="checkbox-container" id="agreementContainer">
-                        <input type="checkbox" id="agreement" name="agreement" required>
-                        <label for="agreement">Я согласен с <a href="#" class="agreement-link">политикой конфиденциальности</a> и даю разрешение на обработку моих персональных данных</label>
-                    </div>
-                    <span class="validation-icon valid-icon"><i class="fas fa-check-circle"></i></span>
-                    <span class="validation-icon invalid-icon"><i class="fas fa-exclamation-circle"></i></span>
-                    <div id="agreementError" class="error-message">Необходимо ваше согласие</div>
-                </div>
-                
-                <button type="submit" class="btn-submit">Отправить данные</button>
-            </form>
-        </div>
-        
-        <div class="footer">
-            <p>Международная форма с валидацией &copy; 2023 | Поддержка всех стран мира</p>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const countrySelect = document.getElementById('country');
-            const phoneInput = document.getElementById('phone');
-            const phoneError = document.getElementById('phoneError');
-            const nameInput = document.getElementById('name');
-            const nameError = document.getElementById('nameError');
-            const emailInput = document.getElementById('email');
-            const emailError = document.getElementById('emailError');
-            const agreementInput = document.getElementById('agreement');
-            const agreementError = document.getElementById('agreementError');
-            const agreementContainer = document.getElementById('agreementContainer');
-            const form = document.getElementById('contactForm');
-            const countryFlag = document.getElementById('countryFlag');
-            const countryName = document.getElementById('countryName');
-            const countryFormat = document.getElementById('countryFormat');
-            const phonePrefix = document.getElementById('phonePrefix');
-            
-            // База данных всех стран мира (249 стран)
-            const countries = [
+            // База данных всех стран мира
+            // const countries = [
+            //     {code: 'RU', name: 'Россия', dialCode: '+7', flag: 'flag-icon-ru', format: '+7 (###) ###-##-##', placeholder: '(999) 999-99-99', regex: /^\+7\s?\(\d{3}\)\s?\d{3}-\d{2}-\d{2}$/},
+            //     {code: 'US', name: 'США', dialCode: '+1', flag: 'flag-icon-us', format: '+1 (###) ###-####', placeholder: '(999) 999-9999', regex: /^\+1\s?\(\d{3}\)\s?\d{3}-\d{4}$/},
+            //     {code: 'DE', name: 'Германия', dialCode: '+49', flag: 'flag-icon-de', format: '+49 ### #### ####', placeholder: '151 12345678', regex: /^\+49[-\s]?\d{3,5}[-\s]?\d{4,8}$/},
+            //     {code: 'FR', name: 'Франция', dialCode: '+33', flag: 'flag-icon-fr', format: '+33 # ## ## ## ##', placeholder: '6 12 34 56 78', regex: /^\+33\s?[1-9]\s?\d{2}\s?\d{2}\s?\d{2}\s?\d{2}$/},
+            //     {code: 'JP', name: 'Япония', dialCode: '+81', flag: 'flag-icon-jp', format: '+81 ##-####-####', placeholder: '90-1234-5678', regex: /^\+81\s?\d{2}-\d{4}-\d{4}$/},
+            //     {code: 'GB', name: 'Великобритания', dialCode: '+44', flag: 'flag-icon-gb', format: '+44 ## #### ####', placeholder: '20 7946 0958', regex: /^\+44\s?\d{2,4}\s?\d{4}\s?\d{4}$/},
+            //     {code: 'CN', name: 'Китай', dialCode: '+86', flag: 'flag-icon-cn', format: '+86 ### #### ####', placeholder: '131 2345 6789', regex: /^\+86\s?\d{3}\s?\d{4}\s?\d{4}$/},
+            //     {code: 'IN', name: 'Индия', dialCode: '+91', flag: 'flag-icon-in', format: '+91 ##### #####', placeholder: '98765 43210', regex: /^\+91\s?\d{5}\s?\d{5}$/},
+            //     {code: 'BR', name: 'Бразилия', dialCode: '+55', flag: 'flag-icon-br', format: '+55 ## #####-####', placeholder: '11 91234-5678', regex: /^\+55\s?\d{2}\s?\d{5}-\d{4}$/},
+            //     {code: 'CA', name: 'Канада', dialCode: '+1', flag: 'flag-icon-ca', format: '+1 (###) ###-####', placeholder: '(416) 555-0199', regex: /^\+1\s?\(\d{3}\)\s?\d{3}-\d{4}$/},
+            //     {code: 'AU', name: 'Австралия', dialCode: '+61', flag: 'flag-icon-au', format: '+61 # #### ####', placeholder: '2 9876 5432', regex: /^\+61\s?\d\s?\d{4}\s?\d{4}$/},
+            //     {code: 'ES', name: 'Испания', dialCode: '+34', flag: 'flag-icon-es', format: '+34 ### ## ## ##', placeholder: '600 12 34 56', regex: /^\+34\s?\d{3}\s?\d{2}\s?\d{2}\s?\d{2}$/},
+            //     {code: 'IT', name: 'Италия', dialCode: '+39', flag: 'flag-icon-it', format: '+39 ### ### ####', placeholder: '333 1234567', regex: /^\+39\s?\d{3}\s?\d{3}\s?\d{4}$/},
+            //     {code: 'MX', name: 'Мексика', dialCode: '+52', flag: 'flag-icon-mx', format: '+52 ## #### ####', placeholder: '55 1234 5678', regex: /^\+52\s?\d{2,3}\s?\d{4}\s?\d{4}$/},
+            //     {code: 'ZA', name: 'ЮАР', dialCode: '+27', flag: 'flag-icon-za', format: '+27 ## ### ####', placeholder: '82 123 4567', regex: /^\+27\s?\d{2}\s?\d{3}\s?\d{4}$/},
+            //     {code: 'KR', name: 'Южная Корея', dialCode: '+82', flag: 'flag-icon-kr', format: '+82 ##-####-####', placeholder: '10-1234-5678', regex: /^\+82\s?\d{2}-\d{4}-\d{4}$/},
+            //     {code: 'TR', name: 'Турция', dialCode: '+90', flag: 'flag-icon-tr', format: '+90 ### ### ####', placeholder: '532 123 4567', regex: /^\+90\s?\d{3}\s?\d{3}\s?\d{4}$/},
+            //     {code: 'NL', name: 'Нидерланды', dialCode: '+31', flag: 'flag-icon-nl', format: '+31 # ### ## ##', placeholder: '6 123 45 67', regex: /^\+31\s?\d\s?\d{3}\s?\d{2}\s?\d{2}$/}
+            // ];
+             const countries = [
                 {code: 'AF', name: 'Афганистан', dialCode: '+93', flag: 'flag-icon-af', format: '+93 ## ### ####', placeholder: '70 123 4567', regex: /^\+93\s?\d{2}\s?\d{3}\s?\d{4}$/},
                 {code: 'AL', name: 'Албания', dialCode: '+355', flag: 'flag-icon-al', format: '+355 ## ### ####', placeholder: '67 123 4567', regex: /^\+355\s?\d{2,3}\s?\d{3}\s?\d{3,4}$/},
                 {code: 'DZ', name: 'Алжир', dialCode: '+213', flag: 'flag-icon-dz', format: '+213 ## ### ####', placeholder: '55 123 4567', regex: /^\+213\s?\d{2}\s?\d{3}\s?\d{4}$/},
@@ -602,19 +237,25 @@
                 {code: 'ZW', name: 'Зимбабве', dialCode: '+263', flag: 'flag-icon-zw', format: '+263 # ######', placeholder: '7 123456', regex: /^\+263\s?\d\s?\d{6}$/}
             ];
             
-            // Заполняем выпадающий список всеми странами
+            // Находим страну по умолчанию
+            const defaultCountry = countries.find(c => c.code === defaultCountryCode) || countries.find(c => c.code === 'RU');
+            
+            // Отображаем текущую страну по умолчанию
+            currentDefaultCountryEl.textContent = `${defaultCountry.name} (${defaultCountry.code})`;
+            
+            // Заполняем выпадающий список странами
             countries.forEach(country => {
                 const option = document.createElement('option');
                 option.value = country.code;
                 option.textContent = `${country.name} (${country.dialCode})`;
-                if (country.code === 'RU') {
+                if (country.code === defaultCountry.code) {
                     option.selected = true;
                 }
                 countrySelect.appendChild(option);
             });
             
-            // Находим текущую страну (Россия по умолчанию)
-            let currentCountry = countries.find(c => c.code === 'IT');
+            // Находим текущую страну
+            let currentCountry = defaultCountry;
             
             // Обновляем информацию о стране
             function updateCountryInfo() {
@@ -622,7 +263,7 @@
                 countryName.textContent = currentCountry.name;
                 countryFormat.textContent = `Формат: ${currentCountry.format}`;
                 phonePrefix.textContent = currentCountry.dialCode;
-                phoneInput.placeholder = currentCountry.placeholder;
+                // phoneInput.placeholder = currentCountry.placeholder;
                 phoneInput.value = '';
                 clearError(phoneInput, phoneError);
             }
@@ -789,8 +430,8 @@
                     
                     // Сброс формы
                     form.reset();
-                    countrySelect.value = 'RU';
-                    currentCountry = countries.find(c => c.code === 'RU');
+                    countrySelect.value = defaultCountry.code;
+                    currentCountry = defaultCountry;
                     updateCountryInfo();
                     
                     // Сброс состояний валидации
@@ -800,6 +441,3 @@
                 }
             });
         });
-    </script>
-</body>
-</html>
