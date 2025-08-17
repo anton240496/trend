@@ -1214,16 +1214,19 @@
 
         <img class="pay_close" src="images/pay_close.svg" alt="">
         <h1 class="pay_title">Preparazione del tuo Ordine. Inserisci i tuoi Dati.</h1>
-      
-<form class="pay_form" action="" id="contactForm">
+
+        <form class="pay_form" action="" id="contactForm">
+
           <div class="pay_input">
             <div class="form-group">
               <span class="none" id="currentDefaultCountry"></span>
-              <input type="text" id="name" name="name" placeholder="Il tuo nome" required>
+              <input class="form_input" type="text" id="name" name="name" placeholder="Il tuo nome" required>
+              <div id="nameError" class="none error-message"></div>
             </div>
 
             <div class="form-group">
-              <input type="email" id="email" name="email" placeholder="ll tuo email" required>
+              <input class="form_input" type="email" id="email" name="email" placeholder="ll tuo email" required>
+              <div id="emailError" class="none error-message"></div>
             </div>
 
             <div class="form-group">
@@ -1233,33 +1236,35 @@
                   <select id="country" class="country-select">
                     <!-- Страны будут добавлены через JavaScript -->
                   </select>
-                  <span id="phonePrefix" class="phone-prefix"></span>
+                  <span id="phonePrefix" class="phone-prefix">+7</span>
                 </div>
-                <input type="tel" id="phone" class="phone-input" name="phone" placeholder="Il tuo numero di telefono" required>
+                <input type="tel" id="phone" class="phone-input form_input" name="phone"
+                  placeholder="Il tuo numero di telefono" required>
               </div>
               <div id="phoneError" class="none error-message"></div>
 
               <div class="none country-info">
                 <span id="countryFlag" class="country-flag flag-icon flag-icon-ru"></span>
                 <div class="country-details">
-                  <div id="countryName" class="country-name">Россия</div>
-                  <div id="countryFormat" class="country-format">format: +7 (XXX) XXX-XX-XX</div>
+                  <div id="countryName" class="country-name"></div>
+                  <div id="countryFormat" class="country-format"></div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="form-group agreement">
-            <div class="checkbox-container" id="agreementContainer">
-              <label class="pay_approval">
-              <input class="pay_check" type="checkbox" required  id="agreement" name="agreement" required>
-              <span class="checkmark checkmarkb"></span>
-              <label class="pay_label" for="agreement">Spuntando questa casella, accetti i Termini d'Uso e l'Informativa sulla Privacy per l'accesso al corso e
-              le email di marketing.</label>
-                </label>
-            </div>
-          </div>
 
-          <button type="submit" class="btn-submit pay_btn btn pay_checkb">Procedi al Pagamento</button>
+            <div class="form-group agreement">
+              <div class="checkbox-container" id="agreementContainer">
+                <label class="pay_approval">
+                  <input class="pay_check" type="checkbox" required id="agreement" name="agreement" required>
+                  <span class="checkmark checkmarkb"></span>
+                  <label class="pay_label" for="agreement">Spuntando questa casella, accetti i Termini d'Uso e
+                    l'Informativa sulla Privacy per l'accesso al corso e le email di marketing.</label>
+                  <div id="agreementError" class="error-message"></div>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit pay_btn btn pay_checkb">Procedi al Pagamento</button>
         </form>
       </section>
 
@@ -1269,17 +1274,20 @@
         <h1 class="pay_title">Posti per questo Piano Esauriti</h1>
         <p class="pay_text">Le iscrizioni per il prossimo gruppo inizieranno presto! Lascia i tuoi dati e ti informeremo
           sull'inizio delle vendite.</p>
-        
 
-         <form class="pay_form" action="" id="contactForm2">
+
+        <form class="pay_form" action="" id="contactForm2">
+
           <div class="pay_input">
             <div class="form-group">
               <span class="none" id="currentDefaultCountry2"></span>
-              <input type="text" id="name2" name="name" placeholder="Il tuo nome" required>
+              <input class="form_input" type="text" id="name2" name="name" placeholder="Il tuo nome" required>
+              <div id="nameError2" class="none error-message"></div>
             </div>
 
             <div class="form-group">
-              <input type="email" id="email2" name="email" placeholder="ll tuo email" required>
+              <input class="form_input" type="email" id="email2" name="email" placeholder="ll tuo email" required>
+              <div id="emailError2" class="none error-message"></div>
             </div>
 
             <div class="form-group">
@@ -1289,40 +1297,37 @@
                   <select id="country2" class="country-select">
                     <!-- Страны будут добавлены через JavaScript -->
                   </select>
-                  <span id="phonePrefix" class="phone-prefix">+7</span>
+                  <span id="phonePrefix2" class="phone-prefix">+7</span>
                 </div>
-                <input type="tel" id="phone2" class="phone-input" name="phone" placeholder="Your Phone number" required>
+                <input type="tel" id="phone2" class="phone-input form_input" name="phone"
+                  placeholder="Il tuo numero di telefono" required>
               </div>
-              <div id="phoneError2" class="none error-message">Пожалуйста, введите действительный номер телефона</div>
+              <div id="phoneError2" class="none error-message"></div>
 
               <div class="none country-info">
                 <span id="countryFlag2" class="country-flag flag-icon flag-icon-ru"></span>
                 <div class="country-details">
-                  <div id="countryName2" class="country-name">Россия</div>
-                  <div id="countryFormat2" class="country-format">Формат: +7 (XXX) XXX-XX-XX</div>
+                  <div id="countryName2" class="country-name"></div>
+                  <div id="countryFormat2" class="country-format"></div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="form-group agreement">
-            <div class="checkbox-container" id="agreementContainer2">
-              <label class="pay_approval">
-              <input class="pay_check" type="checkbox" required  id="agreement2" name="agreement" required>
-              <span class="checkmark checkmarkb"></span>
-              <label class="pay_label" for="agreement2">Spuntando questa casella, accetti i Termini d'Uso e l'Informativa sulla Privacy per l'accesso al corso e
-              le email di marketing.</label>
-                
+
+            <div class="form-group agreement">
+              <div class="checkbox-container" id="agreementContainer2">
+                <label class="pay_approval">
+                  <input class="pay_check" type="checkbox" required id="agreement2" name="agreement" required>
+                  <span class="checkmark checkmarkb"></span>
+                  <label class="pay_label" for="agreement">Spuntando questa casella, accetti i Termini d'Uso e
+                    l'Informativa sulla Privacy per l'accesso al corso e le email di marketing.</label>
+                  <div id="agreementError2" class="error-message"></div>
                 </label>
+              </div>
             </div>
-          </div>
 
-          <button type="submit" class="btn-submit pay_btn btn pay_checkb">Invia</button>
+            <button type="submit" class="btn-submit pay_btn btn pay_checkb">Invia</button>
         </form>
-
       </section>
-      <script>
-        mask(".phone");
-      </script>
     </div>
 
     <div class="container_gird">

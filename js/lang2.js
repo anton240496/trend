@@ -14,7 +14,7 @@
             const countryFlag = document.querySelector('#countryFlag2');
             const countryName = document.querySelector('#countryName2');
             const countryFormat = document.querySelector('#countryFormat2');
-            const phonePrefix = document.querySelector('#phonePrefix');
+            const phonePrefix = document.querySelector('#phonePrefix2');
             const currentDefaultCountryEl = document.querySelector('#currentDefaultCountry2');
             
             // Получаем код страны по умолчанию из data-атрибута

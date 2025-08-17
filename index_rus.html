@@ -1180,16 +1180,19 @@
 
         <img class="pay_close" src="images/pay_close.svg" alt="">
         <h1 class="pay_title">Подготовка вашего заказа. Введите ваши данные</h1>
-    
-         <form class="pay_form" action="" id="contactForm">
+
+        <form class="pay_form" action="" id="contactForm">
+
           <div class="pay_input">
             <div class="form-group">
               <span class="none" id="currentDefaultCountry"></span>
-              <input type="text" id="name" name="name" placeholder="Your name" required>
+              <input class="form_input" type="text" id="name" name="name" placeholder="Your name" required>
+              <div id="nameError" class="none error-message"></div>
             </div>
 
             <div class="form-group">
-              <input type="email" id="email" name="email" placeholder="Email" required>
+              <input class="form_input" type="email" id="email" name="email" placeholder="Email" required>
+              <div id="emailError" class="none error-message"></div>
             </div>
 
             <div class="form-group">
@@ -1201,31 +1204,33 @@
                   </select>
                   <span id="phonePrefix" class="phone-prefix">+7</span>
                 </div>
-                <input type="tel" id="phone" class="phone-input" name="phone" placeholder="Phones" required>
+                <input type="tel" id="phone" class="phone-input form_input" name="phone" placeholder="Phone" required>
               </div>
-              <div id="phoneError" class="none error-message">Пожалуйста, введите действительный номер телефона</div>
+              <div id="phoneError" class="none error-message"></div>
 
               <div class="none country-info">
                 <span id="countryFlag" class="country-flag flag-icon flag-icon-ru"></span>
                 <div class="country-details">
-                  <div id="countryName" class="country-name">Россия</div>
-                  <div id="countryFormat" class="country-format">Формат: +7 (XXX) XXX-XX-XX</div>
+                  <div id="countryName" class="country-name"></div>
+                  <div id="countryFormat" class="country-format"></div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="form-group agreement">
-            <div class="checkbox-container" id="agreementContainer">
-              <label class="pay_approval">
-              <input class="pay_check" type="checkbox" required  id="agreement" name="agreement" required>
-              <span class="checkmark checkmarkb"></span>
-              <label class="pay_label" for="agreement">By checking this box, you agree to the Terms of Use and Privacy Policy for access to the course and
-              marketing emails.</label>
-                </label>
-            </div>
-          </div>
 
-          <button type="submit" class="btn-submit pay_btn btn pay_checkb">Перейти к оплате</button>
+            <div class="form-group agreement">
+              <div class="checkbox-container" id="agreementContainer">
+                <label class="pay_approval">
+                  <input class="pay_check" type="checkbox" required id="agreement" name="agreement" required>
+                  <span class="checkmark checkmarkb"></span>
+                  <label class="pay_label" for="agreement">By checking this box, you agree to the Terms of Use and
+                    Privacy Policy for access to the course and
+                    marketing emails.</label>
+                  <div id="agreementError" class="error-message"></div>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit pay_btn btn pay_checkb">Перейти к оплате</button>
         </form>
 
       </section>
@@ -1236,17 +1241,20 @@
         <h1 class="pay_title">Места на этом тарифе закончились</h1>
         <p class="pay_text">Старт набора в следующую группу совсем скоро! Оставьте ваши данные, и мы сообщим вам о
           старте продаж.</p>
-    
 
-  <form class="pay_form" action="" id="contactForm2">
+
+        <form class="pay_form" action="" id="contactForm2">
+
           <div class="pay_input">
             <div class="form-group">
               <span class="none" id="currentDefaultCountry2"></span>
-              <input type="text" id="name2" name="name" placeholder="Your name" required>
+              <input class="form_input" type="text" id="name2" name="name" placeholder="Your name" required>
+              <div id="nameError2" class="none error-message"></div>
             </div>
 
             <div class="form-group">
-              <input type="email" id="email2" name="email" placeholder="Email" required>
+              <input class="form_input" type="email" id="email2" name="email" placeholder="Email" required>
+              <div id="emailError2" class="none error-message"></div>
             </div>
 
             <div class="form-group">
@@ -1256,37 +1264,37 @@
                   <select id="country2" class="country-select">
                     <!-- Страны будут добавлены через JavaScript -->
                   </select>
-                  <span id="phonePrefix" class="phone-prefix">+7</span>
+                  <span id="phonePrefix2" class="phone-prefix">+7</span>
                 </div>
-                <input type="tel" id="phone2" class="phone-input" name="phone" placeholder="Phone" required>
+                <input type="tel" id="phone2" class="phone-input form_input" name="phone"
+                  placeholder="Phone" required>
               </div>
-              <div id="phoneError2" class="none error-message">Пожалуйста, введите действительный номер телефона</div>
+              <div id="phoneError2" class="none error-message"></div>
 
               <div class="none country-info">
                 <span id="countryFlag2" class="country-flag flag-icon flag-icon-ru"></span>
                 <div class="country-details">
-                  <div id="countryName2" class="country-name">Россия</div>
-                  <div id="countryFormat2" class="country-format">Формат: +7 (XXX) XXX-XX-XX</div>
+                  <div id="countryName2" class="country-name"></div>
+                  <div id="countryFormat2" class="country-format"></div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="form-group agreement">
-            <div class="checkbox-container" id="agreementContainer2">
-              <label class="pay_approval">
-              <input class="pay_check" type="checkbox" required  id="agreement2" name="agreement" required>
-              <span class="checkmark checkmarkb"></span>
-              <label class="pay_label" for="agreement2">By checking this box, you agree to the Terms of Use and Privacy Policy for access to the course and
-              marketing emails.</label>
-                
-                </label>
-            </div>
-          </div>
 
-          <button type="submit" class="btn-submit pay_btn btn pay_checkb">Отправить</button>
+            <div class="form-group agreement">
+              <div class="checkbox-container" id="agreementContainer2">
+                <label class="pay_approval">
+                  <input class="pay_check" type="checkbox" required id="agreement2" name="agreement" required>
+                  <span class="checkmark checkmarkb"></span>
+                  <label class="pay_label" for="agreement">By checking this box, you agree to the Terms of Use and
+                    Privacy Policy for access to the course and
+                    marketing emails.</label>
+                  <div id="agreementError2" class="error-message"></div>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit pay_btn btn pay_checkb">Отправить</button>
         </form>
-        <script>
-        </script>
       </section>
     </div>
 
