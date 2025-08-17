@@ -352,29 +352,37 @@
                 }
             }
             
-            // Валидация email
-            function validateEmail() {
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(emailInput.value)) {
-                    showError(emailInput, emailError, 'Пожалуйста, введите корректный email');
-                    return false;
-                } else {
-                    clearError(emailInput, emailError);
-                    return true;
-                }
-            }
-            
-            // Валидация телефона
-            function validatePhone() {
-                const isValid = currentCountry.regex.test(phoneInput.value);
-                if (!isValid) {
-                    showError(phoneInput, phoneError, `Неверный формат. Пример: ${currentCountry.format.replace(/#/g, 'X')}`);
-                    return false;
-                } else {
-                    clearError(phoneInput, phoneError);
-                    return true;
-                }
-            }
+           // Валидация email
+    function validateEmail() {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value)) {
+            showError(emailInput, emailError, 'Пожалуйста, введите корректный email');
+            form.addEventListener('submit', function (e) {
+                emailInput.focus() = true;
+            })
+            return false;
+        } else {
+            clearError(emailInput, emailError);
+            return true;
+        }
+    }
+
+    // Валидация телефона
+    function validatePhone() {
+        const isValid = currentCountry.regex.test(phoneInput.value);
+        if (!isValid) {
+            showError(phoneInput, phoneError, `Неверный формат. Пример: ${currentCountry.format.replace(/#/g, 'X')}`);
+            form.addEventListener('submit', function (e) {
+                phoneInput.focus() = true;
+            })
+            return false;
+
+        } else {
+            clearError(phoneInput, phoneError);
+            return true;
+        }
+    }
+
             
             // Валидация согласия
             function validateAgreement() {
