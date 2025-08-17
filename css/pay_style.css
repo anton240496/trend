@@ -136,8 +136,8 @@ display: none !important;
 }
 
 .pay_check {
-    outline: none;
    margin-top: -0px;
+   width: 1px;
 }
 
 .checkmark {
@@ -192,6 +192,7 @@ display: none !important;
     color: #222222;
     transition: all .5s;
     opacity: .4;
+    margin-left: 10px;
 }
 
 
@@ -257,7 +258,7 @@ display: none !important;
     }
 
     .pay_check {
-   margin-top: -15px;
+   margin-top: -18px;
 }
 
     .pay_open .pay_input .form_input {
@@ -267,6 +268,7 @@ display: none !important;
     
     .pay_open .pay_input .form_input:required {
         /* background-color: red; */
+        font-size: 20px;
     }
 
     .pay_input .form_input::placeholder {
