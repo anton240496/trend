@@ -1,13 +1,5 @@
 
 
-// $(function() {
-//    $("input[name='phone']").each(function () {
-//        runIntlTelInputAndGeoIp($(this)[0]);
-//     });
-// });
-
-
-
 const op2s = document.querySelectorAll('.apply_wrap')
 
 for (op2 of op2s) {
@@ -153,7 +145,7 @@ var list_checkbox2 = document.querySelectorAll ('input[type="checkbox"]'); //ÐºÐ
 for (var j = 0, J = list_checkbox2.length; j < J; j++)
 if (list_checkbox2[j].checked) themes.push (document.querySelector )
  
-// if (themes.length) alert (' ' + themes.join (', '));
+
   checkmark2.classList.add('checkmark_bord');
 
 
