@@ -138,6 +138,11 @@ display: none !important;
 .pay_check {
    margin-top: -0px;
    width: 1px;
+   outline: none;
+}
+
+.pay_inner{
+  overflow: auto;
 }
 
 .checkmark {

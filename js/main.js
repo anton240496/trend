@@ -98,7 +98,7 @@ for (tarif_btn of btn_2500) {
 tarif_btn.addEventListener('click', e => {
   pay_2500.classList.add('pay_open');
   zatem.classList.add('zatem_open');
-  body.style.overflowY ='hidden'
+//   body.style.overflowY ='hidden'
   
 // const  pay_btn  = document.querySelector('.checkmark');
 
