@@ -198,6 +198,7 @@ display: none !important;
     transition: all .5s;
     opacity: .4;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 
