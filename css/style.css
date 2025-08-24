@@ -199,12 +199,19 @@ body {
 .header_inner {
     margin: 0 auto;
     margin-top: 126px;
+    position: relative;
+    z-index: 3;
+    max-width: 840px;
 }
+
+
+
 
 .header_title {
     font-family: 'alatsi', sans-serif;
     margin-bottom: 17px;
     font-size: 76.56px;
+
     font-weight: 400;
     line-height: 77%;
     letter-spacing: -0.04em;
@@ -316,10 +323,6 @@ body {
     z-index: 0;
 }
 
-.header_inner {
-
-    max-width: 840px;
-}
 
 .banner_svg {
     position: absolute;
@@ -479,6 +482,7 @@ body {
     height: 218px;
     border-radius: 20px;
     position: absolute;
+    z-index: 2;
     right: 77px;
     bottom: 228px;
 }
@@ -746,9 +750,10 @@ body {
 
 .instruction_list {
     display: block;
-    columns: 2;
+    column-count: 2;
     counter-reset: item;
     position: relative;
+    margin: 0 15px;
 }
 
 
@@ -834,7 +839,7 @@ body {
 
 .kyrs_item {
     background-color: #fff;
-    height: 611px;
+    height: 650px;
     border-radius: 30px;
     padding: 30px;
     padding-bottom: 139px;
@@ -1458,8 +1463,9 @@ body {
 .secret_block {
     background-color: #fff;
     border-radius: 50px;
-    padding-top: 63px;
-    padding-bottom: 64px;
+    /* padding-top: 63px; */
+    padding: 63px 30px 64px;
+    /* padding-bottom: 64px; */
     margin-top: -36px;
     position: relative;
 }
@@ -1533,7 +1539,10 @@ body {
 }
 
 .secret_item p span {
+    display: block;
     font-size: 12px;
+    margin-top: 10px;
+    line-height: 100%;
 }
 
 .secret_btn {
@@ -1805,11 +1814,11 @@ body {
     justify-content: space-between;
     padding: 15px 0 20px;
     cursor: pointer;
+    gap: 10px;
 
 }
 
 .ask_que p {
-    width: 440px;
     font-size: 18px;
 }
 
@@ -2216,6 +2225,19 @@ body {
         z-index: 2;
     }
 
+    .kyrs_baner picture {
+        width: 30%;
+        position: absolute;
+        right: 5px;
+        top: 77%;
+    }
+
+    .apply_banner_img {
+        width: 35%;
+        right: -10px;
+        bottom: -75px;
+    }
+
 
 }
 
@@ -2314,6 +2336,7 @@ body {
 
     .provodnik_info {
         margin-top: 0px;
+        margin-right: 15px;
     }
 
     .provodnik_info h2 {
@@ -2385,12 +2408,7 @@ body {
         padding: 45px;
     }
 
-    .kyrs_baner picture {
-        width: 30%;
-        position: absolute;
-        right: 5px;
-        top: 77%;
-    }
+
 
     .kyrs_baner h2 {
         font-size: 36px;
@@ -2461,11 +2479,7 @@ body {
         margin-top: 120px;
     }
 
-    .apply_banner_img {
-        width: 35%;
-        right: -10px;
-        bottom: -75px;
-    }
+
 
     .apply_banner_text h3 {
         font-size: 42px;
@@ -2524,6 +2538,7 @@ body {
 
     .secret_inner {
         padding-bottom: 0px;
+        margin: 0 15px;
     }
 
     .secret_block {
@@ -2710,7 +2725,7 @@ body {
         padding-top: 10px;
         z-index: 0;
         top: 175px;
-        left: 78%;
+        left: 82%;
         bottom: auto;
         border-radius: 9px;
     }
@@ -2851,6 +2866,10 @@ body {
         gap: 0;
     }
 
+    .provodnik_info {
+        margin-right: 0px;
+    }
+
     .provodnik_person {
         height: auto;
         margin: 0 auto;
@@ -2902,6 +2921,7 @@ body {
     .instruction_list {
         display: flex;
         flex-direction: column;
+        margin: 0 0px;
     }
 
 
@@ -3582,7 +3602,7 @@ body {
     .start_ed {
         right: 0%;
         height: 42px;
-        top: 14px;
+        top: 15px;
     }
 
     .start {
@@ -3788,17 +3808,7 @@ body {
 
     }
 
-    .banner_social {
-        width: 105px;
-        height: 90px;
-        padding-top: 10px;
-        z-index: 0;
-        top: 175px;
-        left: 78%;
-        bottom: auto;
-        border-radius: 9px;
-    }
-
+ 
     .banner_social_about {
         gap: 0px;
     }
