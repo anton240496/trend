@@ -2421,7 +2421,7 @@ body {
         font-size: 20px;
         line-height: 25px;
         position: relative;
-        z-index: 1;
+        z-index: -1;
     }
 
     .kyrs_baner_item p {
